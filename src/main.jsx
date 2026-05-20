@@ -204,7 +204,7 @@ function App() {
       <main className="auth-shell">
         <section className="auth-panel">
           <div>
-            <p className="eyebrow">Placement Sprint</p>
+            
             <h1>Team Task Manager</h1>
             <p className="muted">Projects, assignments, progress tracking, and role-based access in one focused workspace.</p>
           </div>
@@ -216,10 +216,10 @@ function App() {
             {authMode === "signup" && (
               <label>Name<input name="name" type="text" placeholder="Your name" required /></label>
             )}
-            <label>Email<input name="email" type="email" placeholder="admin@example.com" required /></label>
-            <label>Password<input name="password" type="password" placeholder="Admin@123" required /></label>
+            <label>Email<input name="email" type="email" placeholder="user@example.com" required /></label>
+            <label>Password<input name="password" type="password" placeholder="password@123" required /></label>
             <button className="primary">Continue</button>
-            <p className="hint">Demo: admin@example.com / Admin@123, member@example.com / Member@123</p>
+            
             {message && <p className="message">{message}</p>}
           </form>
         </section>
@@ -455,5 +455,5 @@ function Team({ isAdmin, currentUser, users, onRole }) {
     </div>
   );
 }
-console.log("hellow i am under water");
+
 createRoot(document.getElementById("root")).render(<App />);
