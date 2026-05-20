@@ -18,6 +18,7 @@
     "dev:web": "vite --host 0.0.0.0",
     "build": "vite build",
     "start": "node src/server.js",
+    "deploy:start": "npx prisma db push && node src/server.js",
     "postinstall": "prisma generate",
     "db:push": "prisma db push",
     "db:seed": "node prisma/seed.js"

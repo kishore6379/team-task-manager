@@ -69,8 +69,11 @@ Railway Deployment:
 4. In the app service variables, add:
 DATABASE_URL = Railway PostgreSQL connection URL
 JWT_SECRET = any long random string
-5. Deploy. Railway will run:
-npm run build && npx prisma db push && node src/server.js
+5. Deploy. Railway will use the Dockerfile. It will:
+- install dependencies
+- build the React frontend
+- run Prisma db push
+- start the Express server
 6. Open the generated Railway domain and test signup/login.
 
 Important API Routes:
